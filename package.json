@@ -9,18 +9,24 @@
     "@sap/cds": "^7",
     "express": "^4",
     "@sap/cds-hana": "^2",
-    "@sap/xssec": "^3"
+    "@sap/xssec": "^3",
+    "passport": "^0"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
     "@sap/cds-dk": "^7",
-    "@sap/eslint-plugin-cds": "^3",
-    "@sap/ux-specification": "^1.120.10",
-    "eslint": "^9"
+    "@sap/ux-specification": "^1.120.2"
   },
   "engines": {
     "node": "^18"
   },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-risks": "cds watch --open risks/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "sapux": [
+    "app/risks"
+  ],
   "cds": {
     "requires": {
       "[development]": {
@@ -49,13 +55,5 @@
         "auth": "xsuaa"
       }
     }
-  },
-  "scripts": {
-    "start": "cds-serve",
-    "watch-risks": "cds watch --open risks/webapp/index.html?sap-ui-xx-viewCache=false"
-  },
-  "sapux": [
-    "app/risks",
-    "app/risks"
-  ]
+  }
 }

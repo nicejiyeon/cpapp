@@ -12,20 +12,8 @@
     "resources": "resources.json",
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
-      "version": "1.13.4",
-      "toolsId": "402349c2-4d91-4761-a634-224ad731eb6e"
-    },
-    "crossNavigation": {
-      "inbounds": {
-        "Risks-display": {
-          "signature": {
-            "parameters": {},
-            "additionalParameters": "allowed"
-          },
-          "semanticObject": "Risks",
-          "action": "display"
-        }
-      }
+      "version": "1.12.2",
+      "toolsId": "cefc73fb-a7bd-4312-9779-0d474732632c"
     },
     "dataSources": {
       "mainService": {
@@ -57,7 +45,7 @@
   "sap.ui5": {
     "flexEnabled": true,
     "dependencies": {
-      "minUI5Version": "1.124.0",
+      "minUI5Version": "1.120.4",
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
@@ -95,7 +83,6 @@
       "css": []
     },
     "routing": {
-      "config": {},
       "routes": [
         {
           "pattern": ":?query:",
@@ -123,13 +110,6 @@
                     "route": "RisksObjectPage"
                   }
                 }
-              },
-              "controlConfiguration": {
-                "@com.sap.vocabularies.UI.v1.LineItem": {
-                  "tableSettings": {
-                    "type": "ResponsiveTable"
-                  }
-                }
               }
             }
           }
@@ -151,9 +131,5 @@
   "sap.fiori": {
     "registrationIds": [],
     "archeType": "transactional"
-  },
-  "sap.cloud": {
-    "public": true,
-    "service": "cpapp.service"
   }
 }
