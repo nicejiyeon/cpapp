@@ -2,7 +2,7 @@ _schema-version: "3.1"
 ID: cpapp
 description: A simple CAP project.
 version: 1.0.0
-modules:
+modules: # 직접 만든 모듈 #
 - name: cpapp-srv
   type: nodejs
   path: gen/srv
@@ -10,7 +10,7 @@ modules:
   - name: cpapp-db
   - name: cpapp-uaa
   - name: cpapp-logs
-  provides:
+  provides: # 해당 모듈을 다른 곳에서 사용할 수 있도록 함 #
   - name: srv-api
     properties:
       srv-url: ${default-url}
@@ -50,7 +50,7 @@ modules:
     - npm install
     - npm run build:cf
     supported-platforms: []
-resources:
+resources: # SAP에서 제공하는 리소스 #
 - name: cpapp-logs
   type: org.cloudfoundry.managed-service
   parameters:
